@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>ТикТакБум</title>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
@@ -13,35 +12,66 @@
 <div class="container">
     <div class="row align-items-center">
         <div class="col col-md-8 offset-md-2">
-            <div class="row">
+            <div class="mb-3 offset-md-1" id='header'>
                 <h1>Тик-так-бум</h1>
             </div>
             <div class="row">
-                <span class="alert alert-primary" id="gameStatusField">Игра идёт</span>
+                <span class="alert alert-primary text-center" id="gameStatusField">Игра идёт</span>
             </div>
             <div class="row">
-                <div class="col">
-                    <div class="timer-output-wrapper">
-                        <div class="timer-output" id="timerField">
-                            00:00
+                <span class="alert alert-primary text-center"> <a href="rules.html">Правила игры</a></span>
+            </div>
+            <div class="collapse show" id="started">
+                <div class="row">
+                    <button class="alert alert-primary" id="newPlayer"><span>Добавить игрока</span></button>
+                    <button class="alert alert-primary" id="deletePlayer"><span>Убать игрока</span></button>
+                </div>
+                <div class="row">
+                    <span>Задайте необходимое время для игры в секундах.</span>
+                </div>
+                <div class="row">
+                    <input type="text" class="alert alert-primary" id="boomTimer">
+                </div>
+                <div class="row">
+                    <button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#started" aria-expanded="false" aria-controls="#started" id="start"><span>Старт Игры</span></button>
+                </div>
+            </div>
+
+            <div class="collapse" id="started">
+                <div class="row">
+                    <div class="col" >
+                        <div class="timer-output-wrapper" id="bodyTimer">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <h3 id="questionField"></h3>
-            </div>
-            <div class="row">
-                <div id="answer1" class="btn btn-primary form-control text-left answer"></div>
-            </div>
-            <div class="row">
-                <div id="answer2" class="btn btn-danger form-control text-left answer"></div>
+                <div class="answer">
+                    <div class="row">
+                        <h3 id="questionField"></h3>
+                    </div>
+                    <div class="row">
+                        <div id="answer1" class="btn form-control text-left answer"></div>
+                    </div>
+                    <div class="row">
+                        <div id="answer2" class="btn form-control text-left answer"></div>
+                    </div>
+                    <div class="row">
+                        <div id="answer3" class="btn form-control text-left answer"></div>
+                    </div>
+                    <div class="row">
+                        <div id="answer4" class="btn form-control text-left answer"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-info btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#started" aria-expanded="false" aria-controls="#started" id="gameOver"><span>Game over!</span></button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div>
 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/utils.js"></script>
 <script src="js/tikTakBoom.js"></script>
 <script src="js/tikTakBoomTasks.js"></script>

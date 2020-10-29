@@ -1,6 +1,8 @@
 body {
     font-family: 'Share Tech Mono', monospace;
+    background-color: beige;
 }
+
 
 .timer-output{
     width: 200px;
@@ -20,4 +22,38 @@ body {
     align-content: center;
     justify-content: center;
     margin: 12px;
+}
+
+h1  {
+    text-align: center;
+    text-decoration-style: solid;
+    margin: 20px;
+}
+
+h2  {
+    text-align: center;
+    text-decoration-style: solid;
+    margin: 15px;
+}
+
+.answer> .row> .btn{
+    background-color: gainsboro;
+}
+
+.row> span, input, button {
+    width: 100%;
+    margin: 3px;
+}
+
+#gameStatusField {
+    font-size: 20px;
+}
+
+#started {
+    margin: 25px 0px 0px 5px;
+}
+
+#bodyTimer> .card > .text_timer {
+    font-size: 40px;
+    text-align: center;
 }
