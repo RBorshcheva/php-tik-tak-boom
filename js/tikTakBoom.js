@@ -1,11 +1,18 @@
 tikTakBoom = {
     init(
         tasks,
-        timerField,
+        timerField1,
+        timerField2,
+        timerField3,
+        timerField4,
+        countOfPlayers,
         gameStatusField,
         textFieldQuestion,
         textFieldAnswer1,
-        textFieldAnswer2
+        textFieldAnswer2,
+        textFieldAnswer3,
+        textFieldAnswer4,
+        boomTimer
     ) {
         this.boomTimer = 30;
         this.countOfPlayers = 2;
